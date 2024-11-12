@@ -1,0 +1,101 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonts & Colors */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F5F5DC; /* Light beige */
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #B0D0D3; /* Soft powder blue */
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+.nav-links li {
+    margin: 0 1rem;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+.login-btn {
+    background-color: #F2C6C6; /* Blush pink */
+    color: #333;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #C9E4E7; /* Sky blue */
+    padding: 2rem;
+}
+.hero-content h1 {
+    color: #333;
+}
+.hero-btn {
+    background-color: #FFADAD; /* Coral */
+    padding: 1rem 2rem;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Sections */
+.section {
+    padding: 2rem;
+    text-align: center;
+}
+.resource-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.resource-item img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+/* Buttons */
+.join-support-btn, .journaling-btn, .contact-btn {
+    background-color: #F2C6C6;
+    color: #333;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+}
+
+/* Video Container */
+.video-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+/* Footer */
+.footer {
+    background-color: #DCDCDC; /* Light gray */
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+}

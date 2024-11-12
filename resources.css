@@ -1,0 +1,156 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F5F5DC; /* Light beige */
+    color: #333; /* Dark gray for text */
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #B0D0D3; /* Soft powder blue */
+}
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+.nav-links a:hover {
+    color: #0056b3; /* Soft blue hover effect */
+}
+
+/* Hero Section */
+.hero {
+    background-color: #C9E4E7; /* Sky blue */
+    text-align: center;
+    padding: 3rem 1rem;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+.hero p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Articles Section */
+.articles {
+    padding: 2rem;
+    background-color: #E8F6F3; /* Light mint */
+    text-align: center;
+}
+.articles h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+.article-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.article {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+.article h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+.article p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+.article a {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: bold;
+}
+.article a:hover {
+    text-decoration: underline;
+}
+
+/* Videos Section */
+.videos {
+    padding: 2rem;
+    background-color: #B0D0D3; /* Soft powder blue */
+    text-align: center;
+}
+.videos h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+.video-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.video {
+    width: 30%;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Quick Tips Section */
+.quick-tips {
+    padding: 2rem;
+    background-color: #C9E4E7; /* Sky blue */
+    text-align: center;
+}
+.quick-tips h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+.quick-tips ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    color: #666;
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.quick-tips li {
+    margin: 0.5rem 0;
+}
+
+/* Footer */
+.footer {
+    background-color: #DCDCDC; /* Light gray */
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #333;
+}
+.footer p {
+    margin: 0;
+}

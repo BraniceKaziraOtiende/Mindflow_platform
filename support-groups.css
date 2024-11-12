@@ -1,0 +1,85 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonts & Colors */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F5F5DC; /* Light beige */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #C9E4E7; /* Sky blue */
+    padding: 1rem;
+}
+.navbar .logo {
+    font-size: 1.8rem;
+    color: #333;
+    text-decoration: none;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Peer Support Section */
+.peer-support {
+    padding: 2.5rem;
+    text-align: center;
+    background-color: #FAFAF5; /* Light cream */
+}
+.peer-support h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+.peer-support p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+.account-prompt {
+    background-color: #EAF7F8; /* Very light blue */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+}
+.account-prompt h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+.account-prompt button {
+    background-color: #FFADAD; /* Coral */
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.account-prompt button:hover {
+    background-color: #ff8b8b; /* Darker coral */
+}
+
+/* Footer */
+.footer {
+    background-color: #DCDCDC; /* Light gray */
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #333;
+}
