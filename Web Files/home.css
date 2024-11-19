@@ -19,12 +19,12 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: #88BDBC; /* Muted teal */
+    background-color: #649897; /* Muted teal */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .navbar .logo {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: bold;
     color: #333;
 }
@@ -59,7 +59,7 @@ body {
 }
 
 .login-btn:hover {
-    background-color: #F28B8B; /* Darker coral */
+    background-color: #dc7070; /* Darker coral */
 }
 
 /* Hero Section */
