@@ -1,60 +1,64 @@
-from flask import Flask, request, render_template, redirect, url_for, flash
+from flask import Flask, render_template, request, redirect, url_for
 import mysql.connector
 from werkzeug.security import generate_password_hash, check_password_hash
 
 app = Flask(__name__)
-app.secret_key = 'your_secret_key'  # Needed for flash messages
 
-# Database connection
+# Configure the MySQL connection
+db_config = {
+    'host': 'localhost',  
+    'user': 'maureen',  
+    'password': 'mypassword', 
+    'database': 'student_credentials' 
+}
+
+# Create a connection to the database
 def get_db_connection():
-    connection = mysql.connector.connect(
-        host="localhost",
-        user="maureen",
-        password="mypassword",
-        database="student_registration"
-    )
-    return connection
+    return mysql.connector.connect(**db_config)
 
 @app.route('/')
-def index():
-    return render_template('form.html')
+def home():
+    return render_template('login.html')  # Render the login/registration form
 
-@app.route('/submit', methods=['POST'])
-def submit():
+@app.route('/process', methods=['POST'])
+def process():
+    action = request.form['action']
     email = request.form['email']
     password = request.form['password']
-    action = request.form['action']
-
+    
     connection = get_db_connection()
-    cursor = connection.cursor(dictionary=True)
+    cursor = connection.cursor()
 
-    if action == 'register':
-        # Check if email already exists
+    if action == "register":
+        # Check if the user already exists
+        cursor.execute("SELECT * FROM users WHERE email = %s", (email,))
+        existing_user = cursor.fetchone()
+        
+        if existing_user:
+            return f"User with email {email} already exists!"
+        
+        # Hash the password for security
+        hashed_password = generate_password_hash(password)
+        
+        # Insert the new user into the database
+        cursor.execute("INSERT INTO users (email, password) VALUES (%s, %s)", (email, hashed_password))
+        connection.commit()
+        
+        return f"Registration successful for {email}"
+
+    elif action == "login":
+        # Check if the user exists
         cursor.execute("SELECT * FROM users WHERE email = %s", (email,))
         user = cursor.fetchone()
 
-        if user:
-            flash("Account with this email already exists. Try logging in.")
+        if user and check_password_hash(user[1], password):  # user[1] is the password field
+            return f"Login successful for {email}"
         else:
-            # Hash the password and insert new user into database
-            hashed_password = generate_password_hash(password)
-            cursor.execute("INSERT INTO users (email, password) VALUES (%s, %s)", (email, hashed_password))
-            connection.commit()
-            flash("Account created successfully! Please log in.")
+            return "Invalid email or password."
 
-    elif action == 'login':
-        # Check if email exists and verify password
-        cursor.execute("SELECT * FROM users WHERE email = %s", (email,))
-        user = cursor.fetchone()
-
-        if user and check_password_hash(user['password'], password):
-            flash("Login successful! Welcome back!")
-        else:
-            flash("Invalid email or password. Please try again.")
-
-    cursor.close()
     connection.close()
-    return redirect(url_for('index'))
+    return redirect(url_for('home'))
 
 if __name__ == '__main__':
-    app.run(debug=True, host="0.0.0.0", port=5000)
+    app.run(host='0.0.0.0', port=5000)
+
