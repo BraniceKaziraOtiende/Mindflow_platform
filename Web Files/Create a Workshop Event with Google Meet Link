@@ -1,0 +1,27 @@
+app.post('/create-event', async (req, res) => {
+  const calendar = google.calendar({ version: 'v3', auth: oauth2Client });
+  
+  const { title, description, startDateTime, endDateTime, attendeeEmail } = req.body; // workshop details from client
+  
+  const event = {
+    summary: title,
+    description: description,
+    start: { dateTime: startDateTime, timeZone: 'America/New_York' },
+    end: { dateTime: endDateTime, timeZone: 'America/New_York' },
+    conferenceData: { createRequest: { requestId: 'some-random-id' } },
+    attendees: [{ email: attendeeEmail }],
+  };
+  
+  try {
+    const response = await calendar.events.insert({
+      calendarId: 'primary',
+      resource: event,
+      conferenceDataVersion: 1, // Enables Meet link generation
+      sendUpdates: 'all',
+    });
+    res.send(`Event created: ${response.data.htmlLink}`); // Sends link to client
+  } catch (error) {
+    console.error('Error creating event:', error);
+    res.status(500).send('Error creating event');
+  }
+});
