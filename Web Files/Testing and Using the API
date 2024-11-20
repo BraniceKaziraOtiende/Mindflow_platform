@@ -1,0 +1,8 @@
+// POST request to http://localhost:3000/create-event
+{
+  "title": "Mental Health Workshop",
+  "description": "An interactive workshop on mental wellness",
+  "startDateTime": "2024-11-15T10:00:00-05:00",
+  "endDateTime": "2024-11-15T11:00:00-05:00",
+  "attendeeEmail": "participant@example.com"
+}
