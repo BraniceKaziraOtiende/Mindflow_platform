@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peer Support | MindFlow</title>
+    <link rel="stylesheet" href="../css/peer_support.css">
+    <script src="../js/peer_support.js" defer></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="../index.html" class="logo">MindFlow</a>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="journaling.html">Journaling</a></li>
+            <li><a href="peer_support.html">Peer Support</a></li>
+            <li><a href="workshops.html">Workshops</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <h1>Peer Support Teams</h1>
+        <p>Join a team of your choice, share your thoughts, and find support with peers.</p>
+    </header>
+
+    <!-- Teams Section -->
+    <main class="teams">
+        <h2>Available Teams</h2>
+        <div class="team-list">
+            <div class="team-card" id="team-anxiety">
+                <h3>Overcoming Anxiety</h3>
+                <p>Connect with others dealing with anxiety and share coping strategies.</p>
+                <button class="join-btn" onclick="joinTeam('Overcoming Anxiety')">Join</button>
+            </div>
+            <div class="team-card" id="team-stress">
+                <h3>Managing Stress</h3>
+                <p>Discuss stress management techniques and learn from each other.</p>
+                <button class="join-btn" onclick="joinTeam('Managing Stress')">Join</button>
+            </div>
+            <div class="team-card" id="team-depression">
+                <h3>Fighting Depression</h3>
+                <p>Find a safe space to share your experiences and build resilience.</p>
+                <button class="join-btn" onclick="joinTeam('Fighting Depression')">Join</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Meeting Scheduler Section -->
+    <section class="scheduler">
+        <h2>Weekly Meetings</h2>
+        <div id="meeting-schedule"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 MindFlow. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

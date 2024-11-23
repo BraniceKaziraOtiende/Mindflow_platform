@@ -1,0 +1,109 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F5F5DC; /* Light beige */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #649897;
+}
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+.nav-links a:hover {
+    color: #0056b3;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    background-color: #C9E4E7;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+.hero p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Teams Section */
+.teams {
+    padding: 2rem;
+    text-align: center;
+}
+.team-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.team-card {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 30%;
+}
+.team-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+}
+.team-card p {
+    color: #666;
+    margin: 1rem 0;
+}
+.team-card .join-btn {
+    padding: 0.5rem 1rem;
+    background-color: #649897;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.team-card .join-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Scheduler Section */
+.scheduler {
+    padding: 2rem;
+    background-color: #E8F6F3;
+    text-align: center;
+}
+.scheduler h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.scheduler #meeting-schedule {
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #666;
+}
